@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430">
+<defs>
+  <linearGradient id="sky" x2="0" y2="1">
+    <stop stop-color="#050b18"/>
+    <stop offset=".65" stop-color="#0b1d36"/>
+    <stop offset="1" stop-color="#123b5d"/>
+  </linearGradient>
+  <linearGradient id="snow" x2="0" y2="1">
+    <stop stop-color="#f8fdff"/>
+    <stop offset="1" stop-color="#b9dff2"/>
+  </linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="3"/></filter>
+</defs>
+
+<rect width="1200" height="430" fill="url(#sky)"/>
+
+<!-- stars -->
+<g fill="#dff7ff">
+  <circle cx="90" cy="65" r="2"><animate attributeName="opacity" values=".2;1;.2" dur="2.4s" repeatCount="indefinite"/></circle>
+  <circle cx="210" cy="105" r="2"><animate attributeName="opacity" values="1;.2;1" dur="3s" repeatCount="indefinite"/></circle>
+  <circle cx="360" cy="55" r="2"/><circle cx="520" cy="100" r="2"/>
+  <circle cx="700" cy="48" r="2"><animate attributeName="opacity" values=".2;1;.2" dur="1.8s" repeatCount="indefinite"/></circle>
+  <circle cx="890" cy="88" r="2"/><circle cx="1080" cy="55" r="2"/>
+</g>
+
+<!-- moon -->
+<circle cx="930" cy="105" r="58" fill="#eaf9ff" opacity=".9"/>
+<circle cx="905" cy="88" r="58" fill="#09172b"/>
+
+<!-- distant mountains -->
+<path d="M0 320 L160 170 L250 270 L390 125 L530 285 L680 150 L820 300 L990 145 L1200 320 V430 H0Z"
+      fill="#102b45"/>
+<path d="M0 350 L180 205 L250 280 L390 155 L520 305 L680 180 L820 315 L990 175 L1200 340 V430 H0Z"
+      fill="#17415f"/>
+
+<!-- snow caps -->
+<g fill="url(#snow)">
+ <path d="M160 170 l-42 60 42-25 24 22 36 12z"/>
+ <path d="M390 125 l-55 65 55-31 30 28 34 15z"/>
+ <path d="M680 150 l-48 58 48-28 30 24 34 18z"/>
+ <path d="M990 145 l-58 65 58-34 32 26 38 14z"/>
+</g>
+
+<!-- glow behind dragon -->
+<ellipse cx="600" cy="275" rx="235" ry="95" fill="#38bdf8" opacity=".10" filter="url(#glow)"/>
+
+<!-- pixel dragon -->
+<g transform="translate(600 235)" shape-rendering="crispEdges">
+  <!-- wings -->
+  <path d="M-75 20 L-210-55 L-225-35 L-190-5 L-230 5 L-175 28 L-195 55 L-125 48Z"
+        fill="#9fe7ff" stroke="#e9fbff" stroke-width="7"/>
+  <path d="M75 20 L210-55 L225-35 L190-5 L230 5 L175 28 L195 55 L125 48Z"
+        fill="#9fe7ff" stroke="#e9fbff" stroke-width="7"/>
+  <!-- body -->
+  <rect x="-78" y="-5" width="156" height="105" rx="18" fill="#2498d1" stroke="#e9fbff" stroke-width="8"/>
+  <rect x="-48" y="25" width="96" height="62" fill="#dff8ff"/>
+  <!-- head -->
+  <rect x="-105" y="-75" width="210" height="105" rx="22" fill="#2ca9df" stroke="#e9fbff" stroke-width="8"/>
+  <!-- horns -->
+  <path d="M-75-72 L-105-115 L-52-88Z M75-72 L105-115 L52-88Z" fill="#f4fcff" stroke="#b9eaff" stroke-width="7"/>
+  <!-- ears -->
+  <path d="M-100-35 L-150-70 L-138-5Z M100-35 L150-70 L138-5Z" fill="#80d9f7"/>
+  <!-- eyes -->
+  <rect x="-62" y="-45" width="34" height="34" fill="#07111f"/>
+  <rect x="28" y="-45" width="34" height="34" fill="#07111f"/>
+  <rect x="-53" y="-37" width="10" height="10" fill="#ffffff">
+    <animate attributeName="opacity" values="1;1;0;1" dur="3.5s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="37" y="-37" width="10" height="10" fill="#ffffff">
+    <animate attributeName="opacity" values="1;1;0;1" dur="3.5s" repeatCount="indefinite"/>
+  </rect>
+  <!-- snout -->
+  <rect x="-58" y="-5" width="116" height="40" fill="#bdefff"/>
+  <rect x="-35" y="10" width="14" height="9" fill="#12314b"/>
+  <rect x="21" y="10" width="14" height="9" fill="#12314b"/>
+  <!-- legs -->
+  <rect x="-62" y="86" width="32" height="55" fill="#2087ba"/>
+  <rect x="30" y="86" width="32" height="55" fill="#2087ba"/>
+  <rect x="-78" y="130" width="55" height="15" fill="#dff8ff"/>
+  <rect x="23" y="130" width="55" height="15" fill="#dff8ff"/>
+  <!-- tail -->
+  <path d="M75 62 Q160 85 205 45 L225 62 Q165 130 75 105Z" fill="#2498d1" stroke="#e9fbff" stroke-width="8"/>
+  <!-- fire -->
+  <g transform="translate(0 155)">
+    <path d="M-35 0 Q0 45 35 0 Q20 65 0 78 Q-20 65-35 0Z" fill="#eafcff">
+      <animateTransform attributeName="transform" type="scale" values="1;.85;1" dur=".6s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</g>
+
+<!-- floating particles -->
+<g fill="#7dd3fc">
+ <rect x="430" y="190" width="5" height="5"><animate attributeName="y" values="190;160;190" dur="2s" repeatCount="indefinite"/></rect>
+ <rect x="770" y="205" width="5" height="5"><animate attributeName="y" values="205;175;205" dur="2.7s" repeatCount="indefinite"/></rect>
+</g>
+
+<text x="600" y="405" text-anchor="middle" fill="#dff8ff"
+      font-family="monospace" font-size="18" letter-spacing="6">
+  WELCOME TO THE PIXEL REALM
+</text>
+</svg>
+    
